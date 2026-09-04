@@ -1,0 +1,32 @@
+{
+  "name": "pmhd-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Master's-level interactive dashboard for SVD, PCA, MDS and LDA",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "plotly.js-cartesian-dist-min": "^2.35.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-plotly.js": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/plotly.js": "^2.33.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-plotly.js": "^2.6.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}
