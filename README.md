@@ -28,8 +28,9 @@ publish from a private repository on a free account), then set
 
 The site is entirely static and client-side: no server, no database, no API keys, and no
 network requests. Data you generate or upload is parsed and analysed in your browser and
-never leaves it. Assets are served from a repository sub-path, which the workflow passes
-to Vite as `BASE_PATH`; if you attach a custom domain later, set `BASE_PATH=/` instead.
+never leaves it. Assets are served from a repository sub-path, which the workflow reads from
+`actions/configure-pages` and passes to Vite as `BASE_PATH`; a custom domain or user site
+resolves to `/` automatically, so no change is needed if you attach one later.
 
 ## Structure
 
