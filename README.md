@@ -14,6 +14,23 @@ npm test           # numerical verification suite (vitest)
 npm run build      # typecheck + production bundle in dist/
 ```
 
+## Deploy
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which installs dependencies,
+runs the numerical test suite, builds, and publishes `dist/` to GitHub Pages. A failing
+test blocks the deployment, so the live site is never built from a broken numerical core.
+
+Live site: https://friedrichwimmer.github.io/MultivariateMethodsLaboratory/
+
+One-time setup in the repository settings: make the repository public (Pages does not
+publish from a private repository on a free account), then set
+**Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
+
+The site is entirely static and client-side: no server, no database, no API keys, and no
+network requests. Data you generate or upload is parsed and analysed in your browser and
+never leaves it. Assets are served from a repository sub-path, which the workflow passes
+to Vite as `BASE_PATH`; if you attach a custom domain later, set `BASE_PATH=/` instead.
+
 ## Structure
 
 | Path | Content |
